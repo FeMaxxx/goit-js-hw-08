@@ -10,8 +10,8 @@ const onPlayingVideo = (data) => {
   localStorage.setItem(VIDEOPLAYER_TIME_KEY, data.seconds);
 };
 
-player.setCurrentTime(localStorage.getItem(VIDEOPLAYER_TIME_KEY));
+player.setCurrentTime(localStorage.getItem(VIDEOPLAYER_TIME_KEY) || 0);
 
 player.getEnded(localStorage.removeItem(VIDEOPLAYER_TIME_KEY));
 
-player.on("timeupdate", throttle(onPlayingVideo, 2000));
+player.on("timeupdate", throttle(onPlayingVideo, 1000));
