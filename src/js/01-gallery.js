@@ -26,5 +26,3 @@ let gallery = new SimpleLightbox(".gallery a", {
   captionPosition: "bottom",
   captionDelay: 250,
 });
-
-galleryEl.addEventListener("click", giveOriginalImg);
