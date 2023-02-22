@@ -4,8 +4,6 @@ const formEl = document.querySelector(".feedback-form");
 const inputEmailEl = formEl.querySelector('input[name="email"]');
 const inputMessageEl = formEl.querySelector('textarea[name="message"]');
 
-console.log(formEl);
-
 const FORM_DATA_STORAGE_KEY = "feedback-form-state";
 
 const formData = {};
@@ -34,7 +32,6 @@ const formDataSaved = () => {
 
   if (formDataParsJSON) {
     inputEmailEl.value = formDataParsJSON.email || "";
-
     inputMessageEl.value = formDataParsJSON.message || "";
   }
 };
